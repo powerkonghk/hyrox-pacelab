@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Barlow Condensed", "Noto Sans HK", sans-serif;
+  --font-sans: "DM Sans", "Noto Sans HK", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #0a0a0a;
+    color: #ffffff;
+    scroll-behavior: smooth;
+  }
+
+  /* Tabular numerals across all numeric counters & tables */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom sleek dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Range slider styling in official HYROX yellow */
+input[type="range"].hyrox-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].hyrox-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 3px;
+  background: #27272a;
+}
+
+input[type="range"].hyrox-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -5px;
+  background-color: #ffdd00;
+  height: 16px;
+  width: 16px;
+  border-radius: 2px;
+  border: 2px solid #0a0a0a;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].hyrox-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+input[type="range"].hyrox-slider::-moz-range-track {
+  height: 6px;
+  border-radius: 3px;
+  background: #27272a;
+}
+
+input[type="range"].hyrox-slider::-moz-range-thumb {
+  background-color: #ffdd00;
+  height: 16px;
+  width: 16px;
+  border-radius: 2px;
+  border: 2px solid #0a0a0a;
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}

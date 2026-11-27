@@ -1,0 +1,8 @@
+{
+  "name": "HYROX PaceLab",
+  "description": "Empirical HYROX race split calculator, station pacing planner, and Roxzone transition optimizer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
